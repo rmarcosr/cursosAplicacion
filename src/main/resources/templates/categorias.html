@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<html xmlns:th="http://www.thymeleaf.org">
+
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Inicio</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+		<div class="container-fluid">
+			<a class="navbar-brand" href="#">
+				<img src="img/logo.svg" alt="Logo" width="150">
+			</a>
+
+			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+				aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+
+			<div class="collapse navbar-collapse" id="navbarNav">
+				<ul class="navbar-nav ms-auto">
+					<li class="nav-item">
+						<a class="nav-link text-light" href="/">Inicio</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link active text-light" href="/crearCurso">Crear curso</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link text-light" href="/categorias">Gestionar categorias</a>
+					</li>
+				</ul>
+			</div>
+
+		</div>
+	</nav>
+
+
+	<div class="container mt-5">
+		<a href="/crearCategoria" class="btn btn-primary">Crear Categoria</a>
+		<table class="table text-center">
+			<thead class="thead-dark">
+				<tr>
+					<th scope="col">Identificador único</th>
+					<th scope="col">Nombre</th>
+					<th scope="col">Número de cursos</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr th:each="categoria : ${categorias}">
+					<th th:text="${categoria.id}"></th>
+					<th>
+						<a th:href="@{/categoria/{id}(id=${categoria.id})}"
+						 th:text="${categoria.nombre}"></a>
+					 </th>
+					<td th:text="${categoria.cursos.size}"></td>
+				</tr>
+			</tbody>
+		</table>
+		<p class="text-muted"> <a href="/crearCurso">Volver</a></p>
+	</div>
+
+
+	<footer class="bg-dark text-white py-3 mt-5">
+		<div class="container text-center">
+			<p>© 2024 Ficticion Studio.</p>
+			<p>
+				<a href="#" class="text-white text-decoration-none mx-2">Términos de uso</a> |
+				<a href="#" class="text-white text-decoration-none mx-2">Política de privacidad</a>
+			</p>
+		</div>
+	</footer>
+
+
+	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+</body>
+
+</html>
