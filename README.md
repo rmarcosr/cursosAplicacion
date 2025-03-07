@@ -1,14 +1,45 @@
-# 📦 Aplicación de Cursos [Plantilla]
-Libre uso sobre la plantilla.
 
-## 🌐 [ESP]
-Una plantilla sobre una aplicación usando Spring Web, Spring JPA, Lombok, Java 21 y Maven.
+# 📦 Aplicación de Cursos 📦
 
-Si descargas el código, usa la siguiente configuración para tu base de datos:
-- **Usuario:** `marcos`  
-- **Contraseña:** `marcos123`
-- La base de datos se creará por si sola con las credenciales y el nombre `cursos` 
+Aplicación para la gestión de cursos
 
-O puedes cambiar las credenciales de acceso en el archivo `application.properties`.
 
-📖 **Todo el código tiene documentación en Español** 
+## Tecnologías usadas:
+**Backend**
+- Spring Web
+- Spring JPA
+- Java 21
+- Lombok
+- Maven
+- Thymeleaf
+
+**Fronted**
+- HTML 5
+- Bootstrap 4.3
+
+**Base de datos**
+- MariaDB
+
+## Requisitos de la base de datos
+
+Crea un usuario con las propiedades:
+```bash
+  CREATE USER 'marcos'@'localhost' IDENTIFIED BY 'marcos123';
+```
+O usa el tuyo propio modificando el archivo `application.properties`
+
+Una vez iniciado el proyecto, navega al puerto 8080 desde un navegador para visualizar el proyecto.
+
+
+    
+## Otros
+
+#### Previsualiación del proyecto
+
+Si quieres ver como se verá el proyecto accede al siguiente enlace de youtube:
+[Aplicación de cursos](URL)
+
+#### Otros proyectos
+
+Accede a mi pagina web, para saber más de mi, mis tecnologías y mis proyectos.
+
