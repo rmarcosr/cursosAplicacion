@@ -37,7 +37,7 @@ Una vez iniciado el proyecto, navega al puerto 8080 desde un navegador para visu
 #### Previsualiación del proyecto
 
 Si quieres ver como se verá el proyecto accede al siguiente enlace de youtube:
-[Aplicación de cursos](URL)
+[Aplicación de cursos](https://youtu.be/e-AHbFpYvbQ)
 
 #### Otros proyectos
 
